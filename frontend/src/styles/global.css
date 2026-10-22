@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b0b0a;--panel:#131311;--panel2:#191916;--line:#292821;--gold:#c9a45c;--gold2:#e1c17b;--text:#f3f0e8;--muted:#96938a;--green:#83b697;--red:#e18d82;--amber:#d8b36b;--radius:14px;font-family:'DM Sans',Arial,sans-serif;color:var(--text);background:var(--bg);font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}input,select,textarea{width:100%;background:#0d0d0c;color:var(--text);border:1px solid #35342d;border-radius:8px;padding:11px 12px;outline:none;transition:border .15s}input:focus,select:focus,textarea:focus{border-color:var(--gold)}input::placeholder,textarea::placeholder{color:#66645d}a{color:inherit;text-decoration:none}::selection{background:#7d6334;color:#fff}
+
+
+/* Customer portal extensions */
+.portal-nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px;padding:8px;background:#111;border:1px solid #302719;border-radius:14px}
+.portal-nav-item{border:1px solid transparent;background:transparent;color:#c8c0b1;padding:10px 13px;border-radius:9px;cursor:pointer;font:inherit;font-size:13px}
+.portal-nav-item:hover{border-color:#554323;color:#fff}
+.portal-nav-item.active{background:linear-gradient(135deg,#d9b66b,#a47b2b);color:#17130b;font-weight:700}
+.portal-form{display:grid;gap:14px}
+.portal-form label{display:grid;gap:7px;color:#cfc5b1;font-size:13px}
+.portal-form input,.portal-form select,.portal-request input,.portal-request select{width:100%;min-width:0;box-sizing:border-box;background:#111;border:1px solid #403624;border-radius:9px;color:#f7f0e3;padding:12px;font:inherit}
+.portal-form input:focus,.portal-form select:focus,.portal-request input:focus,.portal-request select:focus{outline:2px solid #b99345;outline-offset:1px}
+.portal-detail{display:grid;grid-template-columns:minmax(110px, .8fr) 1.2fr;gap:12px;padding:12px 0 18px}
+.portal-detail span{color:#a99d88;font-size:13px}.portal-detail b{overflow-wrap:anywhere;color:#f6eddc;font-size:14px}
+.portal-row-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.btn.small{font-size:12px;padding:6px 9px}
+.status-pill.red{color:#ffb4a9;background:#48201e}
+.portal-request .field{display:grid;gap:7px;flex:1;min-width:220px}
+.portal-request{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.portal-request .btn{min-height:42px}
+.portal-form .form-note,.panel .form-note{font-size:12px;color:#a99d88;line-height:1.6}
+@media(max-width:650px){.portal-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.portal-nav-item{text-align:left}.portal-request{align-items:stretch}.portal-request .btn{width:100%}.portal-detail{grid-template-columns:1fr;gap:5px}.portal-detail b{margin-bottom:8px}.portal-user{gap:8px}.portal-user>span{display:none}}

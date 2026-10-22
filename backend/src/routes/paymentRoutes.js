@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { protect, allowRoles } = require("../middlewares/authMiddleware");
+const controller = require("../controllers/paymentController");
+router.post("/razorpay/order", protect, allowRoles("player"), controller.createOrder);
+router.post("/razorpay/verify", protect, allowRoles("player"), controller.verifyCheckout);
+router.get("/credits", protect, allowRoles("owner", "general_manager", "cashier", "accountant"), controller.credits);
+router.patch("/chip-purchases/:id/approve", protect, allowRoles("owner", "general_manager"), controller.approve);
+router.patch("/chip-purchases/:id/reject", protect, allowRoles("owner", "general_manager"), controller.reject);
+module.exports = router;
