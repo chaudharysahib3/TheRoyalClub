@@ -25,8 +25,14 @@ const errorMiddleware = require("./middlewares/errorMiddleware");
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://theroyalclub-frontend.onrender.com"
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:3000"
+  origin: allowedOrigins,
+  credentials: true
 }));
 
 // Razorpay webhook signatures require the exact raw request bytes; mount before JSON parsing.
